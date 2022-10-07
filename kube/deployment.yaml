@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hazelcast-embedded-springboot-deployment
+  labels: 
+    app:
+      hazelcast-embedded-springboot
+  namespace: develop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hazelcast-embedded-springboot
+  template:
+    metadata:
+      labels:
+        app: hazelcast-embedded-springboot
+    spec:
+      containers:
+      - name: hazelcast-embedded-springboot
+        image: localhost:5000/hazelcast-embedded-springboot:latest
+        imagePullPolicy: Always        
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always

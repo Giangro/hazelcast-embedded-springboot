@@ -4,6 +4,7 @@ hazelcast:
     join:
       multicast:
         enabled: false
-      kubernetes:
+      tcp-ip:
         enabled: true
-        service-dns: hazelcast-embedded-springboot-service.develop.svc.cluster.local
+        connection-timeout-seconds: 5
+        interface: 127.0.0.1
