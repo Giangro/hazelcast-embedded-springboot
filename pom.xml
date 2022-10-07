@@ -25,6 +25,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <environmentVariables>                        
+                    </environmentVariables>
+                    <image>
+                        <name>${project.artifactId}:latest</name>
+                    </image>                  
+                </configuration>
             </plugin>
         </plugins>
     </build>
