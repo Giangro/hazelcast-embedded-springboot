@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HazelcastApplication {
     public static void main(String[] args) {        
+        System.out.println("*** Versione 0.1 ***");
         SpringApplication.run(HazelcastApplication.class, args);
     }
 }

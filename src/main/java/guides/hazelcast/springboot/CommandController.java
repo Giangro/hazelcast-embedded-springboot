@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentMap;
 
 @RestController
@@ -35,5 +37,15 @@ public class CommandController {
     public CommandResponse get(@RequestParam(value = "key") String key) {
         String value = retrieveMap().get(key);       
         return new CommandResponse(value);
+    }
+
+    @GetMapping("/showall")
+    public List<CommandResponse> showall() {                
+        List<CommandResponse> list 
+            = new ArrayList<> ();    
+        retrieveMap().forEach((k,v)->{
+            list.add(new CommandResponse(k+"="+v));
+        });
+        return list;
     }
 }
