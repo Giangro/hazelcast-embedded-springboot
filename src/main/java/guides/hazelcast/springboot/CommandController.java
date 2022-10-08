@@ -40,7 +40,7 @@ public class CommandController {
     }
 
     @GetMapping("/showall")
-    public List<CommandResponse> showall() {                
+    public List<CommandResponse> showall() {             
         List<CommandResponse> list 
             = new ArrayList<> ();    
         retrieveMap().forEach((k,v)->{
