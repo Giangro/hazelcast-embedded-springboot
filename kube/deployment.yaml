@@ -22,4 +22,12 @@ spec:
         imagePullPolicy: Always        
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: hazelcast-config-volume
+          mountPath: /workspace/BOOT-INF/classes/hazelcast.yaml
+          subPath: hazelcast.yaml
+      volumes:
+        - name: hazelcast-config-volume
+          configMap:
+            name: hazelcast-config
       restartPolicy: Always
