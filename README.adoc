@@ -3,3 +3,5 @@
 # See the link:https://www.tabnine.com/code/java/methods/com.hazelcast.scheduledexecutor.IScheduledExecutorService/scheduleOnMember
 # See the link:https://gist.github.com/Asitha/a079a0b450e76292fafc#file-getleadernode-java
 # See the link:https://github.com/hazelcast/hazelcast-code-samples/blob/master/distributed-executor/scheduling-on-specific-member/src/main/java/MasterMember.java#L26
+# See the link:https://hazelcast.com/blog/cluster-leader-election-spring-integration-hazelcast/
+# See the link:https://bitbucket.org/tomask79/spring-leader-hazelcast/src/master/
